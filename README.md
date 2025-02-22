@@ -16,17 +16,16 @@ This README file was written using the [GitHub's documentation on READMEs](https
 ## **Table of contents**
 
 1. [Introduction.](#1-introduction).
-1. [The purpose of this project.](#2-the-purpose-of-this-project)
+1. [The purpose of this module.](#2-the-purpose-of-this-module)
 1. [How to get started.](#3-how-to-get-started)
 1. [How to get help.](#4-how-to-get-help)
 1. [How to contribute.](#5-how-to-contribute)
 1. [Weekly Assignment.](#6-weekly-assignments)
 
     1. [Assignment 02- Card Draw](#assignment-02---card-draw)
-    2. [Assignment 02- ](#)
-    3. [Assignment 03- ](#)
-    5. [Assignment 05- ](#)
-    6. [Assignment 06- ](#)
+    1. [Assignment 03- CSO](#assignment-03---cso)
+    1. [Assignment 05- ](#)
+    1. [Assignment 06- ](#)
 
 ## 1. Introduction
 
@@ -38,16 +37,14 @@ This repository is a collection of my weekly assignments, including some additio
 
 ***
 
-## 2. The purpose of this project
+## 2. The purpose of this module
 
-As noted on the [assignment instructions](),
+As noted on the [module introduction](https://vlegalwaymayo.atu.ie/course/view.php?id=12365),
 
-The purpose of the assessment is to ensure students can demonstrate the following:
-
-1. Programmatically create plots and other visual outputs from data.
-1. Design computer algorithms to solve numerical problems.
-1. Create software that incorporates and utilises standard numerical libraries.
-1. Employ appropriate data structures when programming for data-intensive applications.
+- Introduce various means of retrieving data from external sources (for example CSO, weather servers, stock information).
+- The module will look at the formats that data can come in (XML, JSON,CSV).
+- How to retrieve (through an API) and process that data, using JavaScript and Python.
+- Explore how to make your data available to the outside world by creating an API (Application Programmer's Interface) using the python module Flask.
 
 ## 3. How to get started
 
@@ -134,7 +131,8 @@ Should you find any errors or have any recommendations, please submit a pull req
 
 **Assignment Instructions:**
 
-Using the [Deck of Cards API](https://deckofcardsapi.com/), 
+Using the [Deck of Cards API](https://deckofcardsapi.com/),
+
 1. Write a program that "deals" (prints out) 5 cards (get the deck_id)
 1. Print the value and the suit of each card.
 
@@ -143,11 +141,15 @@ Check if the user has drawn a pair, triple, straight, or all of the same suit an
 
 ***
 
-## **Assignment 0** - 
+## **Assignment 03** - CSO
 
 **Assignment Instructions:**
 
-T
+Write a program that retrieves the dataset for the "exchequer account (historical series)" from the CSO, and stores it into a file called "cso.json".
+
+1. Upload this program to the same repository you used for the first assignment
+1. Save this assignment as "assignment03-cso.py"
+
 ```ruby
 
 ```
