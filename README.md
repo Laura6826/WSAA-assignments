@@ -150,16 +150,6 @@ Write a program that retrieves the dataset for the "exchequer account (historica
 1. Upload this program to the same repository you used for the first assignment
 1. Save this assignment as "assignment03-cso.py"
 
-```ruby
-
-```
-
-### Associated Code
-
-
-**My notes:**
-
-
 ***
 
 ## **Assignment 0** - 
