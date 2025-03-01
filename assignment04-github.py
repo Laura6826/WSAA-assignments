@@ -6,32 +6,47 @@ from github import Github
 import requests
 from config import config as cfg
 
-apikey = cfg["WSAA-assignments"]
+api_key = cfg["WSAA-assignments"]
 
 def replace_text_in_file():
     try:
-        g = Github(apikey)
+        g = Github(api_key)
         repo = g.get_repo("Laura6826/WSAA-assignments")
-        fileInfo = repo.get_contents("data/assignment04andrew.txt")
-        urlOfFile = fileInfo.download_url
-        response = requests.get(urlOfFile)
-        contentOfFile = response.text
+        file_path = "data/assignment04laura.txt"
+        
+        # Check if the file already exists
+        try:
+            file_info = repo.get_contents(file_path)
+            sha = file_info.sha
+            file_exists = True
+        except:
+            sha = None
+            file_exists = False
+
+        # Fetch the original file content
+        original_file_info = repo.get_contents("data/assignment04andrew.txt")
+        url_of_file = original_file_info.download_url
+        response = requests.get(url_of_file)
+        content_of_file = response.text
 
         # Replace all instances of "Andrew" with "Laura" written in red
-        newContents = contentOfFile.replace("Andrew", "<span style='color:red'>Laura</span>")
-        print("Updated Contents:\n", newContents)
+        new_contents = content_of_file.replace("Andrew", "<span style='color:red'>Laura</span>")
+        print("Updated Contents:\n", new_contents)
 
-        # Save the new content to a separate file in the repository, so that the original file is not overwritten.
-        # Specify the new file path and create the file in the repository.
-        new_file_path = "data/assignment04laura.txt"  
-        repo.create_file(new_file_path, "Created new file with 'Andrew' replaced by 'Laura'", newContents)
-        print(f"New file created successfully at: {new_file_path}")
+        # Update or create the file with new contents
+        if file_exists:
+            gitHubResponse = repo.update_file(file_path, "Replaced 'Andrew' with 'Laura'", new_contents, sha)
+        else:
+            gitHubResponse = repo.create_file(file_path, "Created new file with 'Andrew' replaced by 'Laura'", new_contents)
+        
+        print("File operation successful:", gitHubResponse)
 
     except Exception as e:
         print("An error occurred:", e)
 
 if __name__ == "__main__":
     replace_text_in_file()
+
 
 
 
