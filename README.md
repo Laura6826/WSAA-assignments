@@ -24,7 +24,7 @@ This README file was written using the [GitHub's documentation on READMEs](https
 
     1. [Assignment 02- Card Draw](#assignment-02---card-draw)
     1. [Assignment 03- CSO](#assignment-03---cso)
-    1. [Assignment 05- ](#)
+    1. [Assignment 04- github authentication](#assignment-04---githubpy)
     1. [Assignment 06- ](#)
 
 ## 1. Introduction
@@ -152,15 +152,20 @@ Write a program that retrieves the dataset for the "exchequer account (historica
 
 ***
 
-## **Assignment 0** - 
+## **Assignment 04** - github.py  
 
 **Assignment Instructions:**
 
+1. Write a program in python that will read a file from a repository.
+1. The program should then replace all the instances of the text "Andrew" with your name.
+1. The program should then commit those changes and push the file back to the repository.
+
 **My notes:**
+
+Is it very import that no API keys are pushed to github, it is best practice to store the 'keys' in a 'config.py' file and called upon each time there are needed.
+
+Its also essential that you add 'config.py' to your '.ignore' file, as this will ensure that this file is not pushed up to github.
 
 ***
 
-
-
-### End
-
+### End.
