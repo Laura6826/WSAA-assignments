@@ -166,6 +166,8 @@ Is it very import that no API keys are pushed to github, it is best practice to 
 
 Its also essential that you add 'config.py' to your '.ignore' file, as this will ensure that this file is not pushed up to github.
 
+The code was amended so that the new content would be saved to a new file ad
+
 ***
 
 ### End.
