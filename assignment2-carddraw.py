@@ -2,7 +2,7 @@
 # The aim of this program is to output use the Deck of Cards API to draw 5 cards from a shuffled deck and print the value and suit of each card.
 # Author: Laura Lyons
 
-import requests
+import requests 
 import json
 
 def deal_cards():
