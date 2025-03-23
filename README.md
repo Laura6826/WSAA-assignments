@@ -87,11 +87,11 @@ pip install -r requirements.txt
 ,or you can manually install each of the libraries below.+
 
 ```ruby
-  import pandas as pd
-  import numpy as np
-  import matplotlib.pyplot as plt
-  import seaborn as sns
-  import scipy
+import os
+import json
+import requests
+from github import Github
+from config import config as cfg
 ```
 
 ***
@@ -109,16 +109,10 @@ I have attached below, a number of helpful links, should you wish to extrapolate
 1. [Anaconda](https://www.atu.ie/sites/default/files/2024-02/aqae022-academic-integrity-policy-1.pdf)
 1. [Visual Studio Code](https://code.visualstudio.com/Download)
 1. [w3schools](https://www.w3schools.com/)
-1. [Pandas](https://pandas.pydata.org/)
-1. [Numpy](https://numpy.org/)
-1. [Matplotlib.py](https://matplotlib.org/)
-1. [Seaborn](https://seaborn.pydata.org/)
-
-Additionally, a number of links are embedded within the code, in areas that I found confusing, that should help should there be any difficulty.
 
 ## 5. How to contribute
 
-As this project was created to fulfil an assessment requirement of the Principles of Data Analytics, as part of the H.Dip in Science in Data Analytics, no contributions will be allowed, in order to comply with ATU Policy on [Plagiarism](https://www.atu.ie/sites/default/files/2024-02/aqae022-academic-integrity-policy-1.pdf) and the [Student Code of Conduct](https://www.atu.ie/sites/default/files/2022-08/Student%20Code_Final_August_2022.pdf).
+As this project was created to fulfil an assessment requirement of the Web Services and Applications 24-25: 8640, as part of the H.Dip in Science in Data Analytics, no contributions will be allowed, in order to comply with ATU Policy on [Plagiarism](https://www.atu.ie/sites/default/files/2024-02/aqae022-academic-integrity-policy-1.pdf) and the [Student Code of Conduct](https://www.atu.ie/sites/default/files/2022-08/Student%20Code_Final_August_2022.pdf).
 
 Should you find any errors or have any recommendations, please submit a pull request on GitHub. or just wish to contact that author, you can do so at <maxwell6826@gmail.com>.
 
