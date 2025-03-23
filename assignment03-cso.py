@@ -2,8 +2,8 @@
 # The aim of this program is to write a program that retrieves the dataset for the "exchequer account (historical series)" from the CSO, and stores it into a file called "cso.json".
 # Author: Laura Lyons
 
-import requests
 import json
+import requests
 
 # url = "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/JSON-stat/2.0/en"
 # response = requests.get(url)
@@ -18,7 +18,7 @@ def getAll(dataset):
     return response.json()
 
 def getAllAsFile(dataset):
-    with open("cso.json", "wt") as fp:
+    with open("data/cso.json", "wt") as fp:
         print(json.dumps(getAll(dataset)), file=fp)
     
 if __name__ == "__main__":
