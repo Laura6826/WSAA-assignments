@@ -8,6 +8,38 @@
 import requests
 import json
 
+def check_hand(cards):
+    # Extract values and suits from the drawn cards
+    values = [card['value'] for card in cards]
+    suits = [card['suit'] for card in cards]
+    
+    # Convert face cards to numbers for easy comparison
+    value_conversion = {'ACE': 1, 'JACK': 11, 'QUEEN': 12, 'KING': 13}
+    numeric_values = [value_conversion.get(value, value) for value in values]
+    numeric_values = list(map(int, numeric_values))
+    
+    # Check for pairs and triples
+    value_counts = {value: numeric_values.count(value) for value in numeric_values}
+    pair = any(count == 2 for count in value_counts.values())
+    triple = any(count == 3 for count in value_counts.values())
+    
+    # Check for a straight
+    numeric_values.sort()
+    straight = all(numeric_values[i] == numeric_values[i-1] + 1 for i in range(1, len(numeric_values)))
+    
+    # Check for a flush (all cards of the same suit)
+    flush = len(set(suits)) == 1
+
+    # Print congratulatory messages
+    if pair:
+        print("Congratulations! You've drawn a pair.")
+    if triple:
+        print("Congratulations! You've drawn a triple.")
+    if straight:
+        print("Congratulations! You've drawn a straight.")
+    if flush:
+        print("Congratulations! All cards are of the same suit.")
+
 def deal_cards():
     try:
         # Step 1: Shuffle a new deck
@@ -28,6 +60,9 @@ def deal_cards():
         print("Dealt Cards:")
         for card in cards:
             print(f"{card['value']} of {card['suit']}")
+
+        # Step 4: Check the hand.
+        check_hand(cards)
 
     except requests.exceptions.HTTPError as errh:
         print("HTTP Error:", errh)
