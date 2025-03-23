@@ -25,11 +25,10 @@ This README file was written using the [GitHub's documentation on READMEs](https
     1. [Assignment 02- Card Draw](#assignment-02---card-draw)
     1. [Assignment 03- CSO](#assignment-03---cso)
     1. [Assignment 04- github authentication](#assignment-04---githubpy)
-    1. [Assignment 06- ](#)
 
 ## 1. Introduction
 
-This project was created to fulfill an assessment requirement of Web Services and Applications 24-25: 8640, as part of the H.Dip in Science in Data Analytics.
+This README was created to fulfill an assessment requirement of Web Services and Applications 24-25: 8640, as part of the H.Dip in Science in Data Analytics.
 
 Each week, following a series of lectures, an assignment was set, to demonstrate both learning and additional reading/research on the topics discussed in the lectures.
 
@@ -67,14 +66,14 @@ A number of [additional files](https://github.com/github/gitignore/tree/main/Glo
   6. Vim.gitignore
   7. Windows.gitignore
 
-## How to run the Notebook
+## How to run these files
 
 ### Using Visual Studio Code & Anaconda or GitHub Codespaces
 
 **Clone the Repository**:
 
 ```ruby
-   git clone https://github.com/Laura6826/PFDA-project
+   git clone https://github.com/Laura6826/WSAA-assignments
 ```
 
 **Install the required packages**:
